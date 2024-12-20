@@ -6,5 +6,17 @@ export default {
 		extend: {}
 	},
 
-	plugins: []
+	plugins: [
+		require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+    require('cssnano')({
+      preset: 'default',
+    })
+	],
+	mode: 'jit',
+  purge: [
+    './public/**/*.{html,js}',
+    './src/**/*.{js,svelte,ts}'
+  ]
 };

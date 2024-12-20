@@ -2,6 +2,8 @@
 	"useTabs": true,
 	"singleQuote": true,
 	"trailingComma": "none",
+	"singleAttributePerLine": true,
+	"experimentalTernaries": true,
 	"printWidth": 100,
 	"plugins": ["prettier-plugin-svelte"],
 	"overrides": [
