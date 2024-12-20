@@ -1,1 +1,1 @@
-# Art portfolio of Marie rossi (v2)
+# Art portfolio of Marie Rossi (v2)
