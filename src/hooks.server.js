@@ -10,4 +10,4 @@ const contentTypeResolver = async ({ event, resolve }) => {
   });
 }
 
-export const handle = sequence(contentTypeResolver, handleParaglide);
+export const handle = sequence(handleParaglide, contentTypeResolver);
