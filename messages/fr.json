@@ -1,5 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Bonjour!",
-	"test_hey": "hey FR"
+	"about": "A propos",
+	"echosystem": "Ech(o)system",
+	"ghostsong": "GhostSong"
 }

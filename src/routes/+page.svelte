@@ -1,5 +1,8 @@
 <script>
-	import * as m from '$lib/paraglide/messages.js'
-</script>
+	import { goto } from '$app/navigation';
+	import { browser } from '$app/environment';
 
-<h1>{m.hello_world()}</h1>
+	if (browser) {
+		window.location.href = '/works';
+	}
+</script>

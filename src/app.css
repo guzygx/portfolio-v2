@@ -1,3 +1,50 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+html,
+body {
+  min-height: 100%;
+  font-family: theme('fontFamily.display');
+  background-color: theme('colors.black');
+  color: theme('colors.white');
+}
+
+@font-face {
+  font-family: 'standard-graf';
+  font-style: normal;
+  font-weight: 400;
+  src: local('standard-graf_regular'), url('$lib/assets/fonts/standard-graf_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'junicode';
+  font-style: normal;
+  font-weight: 400;
+  src: local('junicode_regular'), local('junicode_bold'), local('junicode_bold-italic'), url('$lib/assets/fonts/junicode_regular.woff') format('woff');
+}
+
+.no-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.text-invert {
+  filter: invert(1);
+  mix-blend-mode: difference;
+}
+
+.text-outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
