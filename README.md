@@ -1,1 +1,1 @@
-# Art portfolio of Marie Rossi (v2)
+# Portfolio of Pandore Rossi (v2)

@@ -1,7 +1,3 @@
-<script>
-	import * as m from '$lib/paraglide/messages.js';
-</script>
-
 <div>
 	<p>
 		Using sound and software, Marie Rossi questions capitalist mass culture from the angle of

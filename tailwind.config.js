@@ -34,9 +34,5 @@ export default {
       preset: 'default',
     })
   ],
-  mode: 'jit',
-  purge: [
-    './public/**/*.{html,js}',
-    './src/**/*.{js,svelte,ts}'
-  ]
+  mode: 'jit'
 };

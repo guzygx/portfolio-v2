@@ -1,13 +1,25 @@
-import { paraglide } from '@inlang/paraglide-sveltekit/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import { defineConfig, searchForWorkspaceRoot } from 'vite';
+import { paraglideVitePlugin } from '@inlang/paraglide-js';
 
 export default defineConfig({
 	plugins: [
 		sveltekit(),
-		paraglide({
+		paraglideVitePlugin({
 			project: './project.inlang',
-			outdir: './src/lib/paraglide'
+			outdir: './src/i18n/dist',
+			strategy: ['url', 'cookie', 'baseLocale'],
+			pathnamePrefixDefaultLanguage: true,
+			urlPatterns: [
+				{
+					pattern: "/:path(.*)?",
+					localized: [
+						["fr", "/fr/:path(.*)?"],
+						["en", "/en/:path(.*)?"],
+					],
+				},
+			],
 		})
 	]
 });
+

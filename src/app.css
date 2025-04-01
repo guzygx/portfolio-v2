@@ -14,7 +14,7 @@ body {
   font-family: 'standard-graf';
   font-style: normal;
   font-weight: 400;
-  src: local('standard-graf_regular'), url('$lib/assets/fonts/standard-graf_regular.woff') format('woff');
+  src: local('standard-graf_regular'), url('/fonts/standard-graf_regular.woff') format('woff');
 }
 
 .grainy-bw {

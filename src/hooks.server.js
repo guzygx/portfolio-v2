@@ -1,13 +1,13 @@
-import { sequence } from '@sveltejs/kit/hooks';
-import { i18n } from '$lib/i18n';
-const handleParaglide = i18n.handle();
+import { paraglideMiddleware } from './src/i18n/dist/server';
 
-// Fix some content-type error during initial hydratation
-const contentTypeResolver = async ({ event, resolve }) => {
-  return resolve(event, {
-    // you can also seralize other headers here if needed
-    filterSerializedResponseHeaders: (name, value) => name === 'content-type'
-  });
-}
+const paraglideHandle = ({ event, resolve }) =>
+	paraglideMiddleware(event.request, ({ request: localizedRequest, locale }) => {
+		event.request = localizedRequest;
+		return resolve(event, {
+			transformPageChunk: ({ html }) => {
+				return html.replace('%lang%', locale);
+			}
+		});
+	});
 
-export const handle = sequence(handleParaglide, contentTypeResolver);
+export const handle = paraglideHandle;
