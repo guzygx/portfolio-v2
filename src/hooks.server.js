@@ -1,4 +1,4 @@
-import { paraglideMiddleware } from './src/i18n/dist/server';
+import { paraglideMiddleware } from './i18n/dist/server';
 
 const paraglideHandle = ({ event, resolve }) =>
 	paraglideMiddleware(event.request, ({ request: localizedRequest, locale }) => {
