@@ -1,7 +1,7 @@
 import { paraglideMiddleware } from '$lib/i18n/dist/server';
 
-const paraglideHandle = ({ event, resolve }) =>
-	paraglideMiddleware(event.request, ({ request: localizedRequest, locale }) => {
+const paraglideHandle = ({ event, resolve }) => {
+	return paraglideMiddleware(event.request, ({ request: localizedRequest, locale }) => {
 		event.request = localizedRequest;
 		return resolve(event, {
 			transformPageChunk: ({ html }) => {
@@ -9,5 +9,5 @@ const paraglideHandle = ({ event, resolve }) =>
 			}
 		});
 	});
-
+}
 export const handle = paraglideHandle;
