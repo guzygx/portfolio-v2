@@ -1,5 +1,5 @@
 <script>
-	import * as m from '/src/i18n/dist/messages';
+	import * as m from '$lib/i18n/dist/messages';
 </script>
 
 <a href="/works/echosystem">{m.echosystem()}</a>

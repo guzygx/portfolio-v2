@@ -7,7 +7,10 @@ export default defineConfig({
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './project.inlang',
-			outdir: './src/i18n/dist',
+			outdir: './src/lib/i18n/dist',
+			emitGitIgnore: false,
+			emitPrettierIgnore: false,
+			emitDts: false,
 			strategy: ['url', 'cookie', 'baseLocale'],
 			pathnamePrefixDefaultLanguage: true,
 			urlPatterns: [
