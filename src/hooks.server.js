@@ -1,7 +1,6 @@
 import { paraglideMiddleware } from '$lib/i18n/dist/server';
 
 const paraglideHandle = ({ event, resolve }) => {
-	console.log('azi')
 	return paraglideMiddleware(event.request, ({ request: localizedRequest, locale }) => {
 		event.request = localizedRequest;
 		return resolve(event, {

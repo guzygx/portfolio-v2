@@ -1,15 +1,16 @@
 <script>
-	import Footer from '$lib/components/Footer/Footer.svelte';
-	import Header from '$lib/components/Header/Header.svelte';
-	import Body from '$lib/components/Body/Body.svelte';
+	import ParaglideSSG from '$lib/components/ParaglideSSG/index.svelte';
+	import Footer from '$lib/components/Footer/index.svelte';
+	import Header from '$lib/components/Header/index.svelte';
+	import Body from '$lib/components/Body/index.svelte';
 	import '../app.css';
-	
+
 	let { children } = $props();
-	
 </script>
 
-	<Header />
-	<Body>
-		{@render children()}
-	</Body>
-	<Footer />
+<ParaglideSSG />
+<Header />
+<Body>
+	{@render children()}
+</Body>
+<Footer />
